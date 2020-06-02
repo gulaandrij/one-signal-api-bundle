@@ -1,22 +1,15 @@
 {
-    "name": "samiaraboglu/one-signal-api-bundle",
+    "name": "gulaandrij/one-signal-api-bundle",
     "type": "symfony-bundle",
     "description": "Symfony OneSignal Api Bundle",
     "keywords": ["symfony", "onesignal", "api", "symfony-bundle", "one-signal"],
-    "homepage": "https://github.com/samiaraboglu/one-signal-api-bundle",
     "license": "MIT",
-    "authors": [
-        {
-          "name": "Sami Araboğlu",
-          "email": "samiaraboglu@gmail.com"
-        }
-    ],
     "require": {
         "php": ">=5.5",
         "symfony/framework-bundle": "^3.0|^4.0|^5.0",
         "guzzlehttp/guzzle": "^6.0",
         "php-http/guzzle6-adapter": "^1.0",
-        "norkunas/onesignal-php-api": "^1.2"
+        "norkunas/onesignal-php-api": "^1.2|^2"
     },
     "require-dev": {
 
@@ -26,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Samiax\\OneSignalApiBundle\\": ""
+            "GulaAndrij\\OneSignalApiBundle\\": ""
         }
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Samiax\OneSignalApiBundle\DependencyInjection;
+namespace GulaAndrij\OneSignalApiBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('samiax_one_signal_api');
+        $rootNode = $treeBuilder->root('one_signal_api');
 
         $rootNode
             ->children()
