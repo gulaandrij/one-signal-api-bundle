@@ -41,6 +41,12 @@ one_signal_api:
 ### Basic Use
 Gets all apps:
 
+- services.yaml:
+```yaml
+    App\Controller\Admin\DashboardController:
+        arguments: ['@one_signal_api.service']
+```
+- DashboardController.php
 ```php
 $service = $this->get('one_signal_api.service');
 

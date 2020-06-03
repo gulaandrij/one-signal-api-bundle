@@ -18,13 +18,21 @@ services:
 
     one_signal_api.config:
         class: OneSignal\Config
-        calls:
-            - [setApplicationId, ['%one_signal_api.app_id%']]
-            - [setApplicationAuthKey, ['%one_signal_api.app_auth_key%']]
-            - [setUserAuthKey, ['%one_signal_api.user_auth_key%']]
+        arguments:
+            - '%one_signal_api.app_id%'
+            - '%one_signal_api.app_auth_key%'
+            - '%one_signal_api.user_auth_key%'
+#        calls:
+#            - [setApplicationId, ['%one_signal_api.app_id%']]
+#            - [setApplicationAuthKey, ['%one_signal_api.app_auth_key%']]
+#            - [setUserAuthKey, ['%one_signal_api.user_auth_key%']]
+
+    Nyholm\Psr7\Factory\Psr17Factory: ~
 
     one_signal_api.service:
         class: OneSignal\OneSignal
         arguments:
             - '@one_signal_api.config'
             - '@one_signal_api.http_client'
+            - '@Nyholm\Psr7\Factory\Psr17Factory'
+            - '@Nyholm\Psr7\Factory\Psr17Factory'
